@@ -30,34 +30,19 @@
  * @since           1.0.0
  * @author 		Olivier Bossel<olivier.bossel@gmail.com>
  */
-
-export type TI18nSettings = {};
-
 export default class I18n {
-  /**
-   * @name            settings
-   * @type           T18nSettings
-   *
-   * Store the settings
-   *
-   * @since      1.0.0
-   * @author 		Olivier Bossel<olivier.bossel@gmail.com>
-   */
-  settings: TI18nSettings;
-
-  /**
-   * @name            constructor
-   * @type            Function
-   * @constructor
-   *
-   * Constructor
-   *
-   * @since       1.0.0
-   * @author 		Olivier Bossel<olivier.bossel@gmail.com>
-   */
-  constructor(settings: Partial<TI18nSettings> = {}) {
-    this.settings = {
-      ...(settings ?? {}),
-    };
-  }
+    /**
+     * @name            constructor
+     * @type            Function
+     * @constructor
+     *
+     * Constructor
+     *
+     * @since       1.0.0
+     * @author 		Olivier Bossel<olivier.bossel@gmail.com>
+     */
+    constructor(settings = {}) {
+        this.settings = Object.assign({}, (settings !== null && settings !== void 0 ? settings : {}));
+    }
 }
+//# sourceMappingURL=I18n.js.map

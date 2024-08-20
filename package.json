@@ -9,33 +9,12 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@coffeekraken/s-duration": "^2.0.0-alpha.27",
-    "@coffeekraken/s-env": "^2.0.0-alpha.27",
-    "@coffeekraken/s-glob": "^2.0.0-alpha.27",
     "@lotsof/sugar": "^1.0.0",
-    "@ts-ast-parser/core": "^0.2.0",
-    "@ts-ast-parser/readers": "^0.2.0",
-    "ntypescript": "^1.201706190042.1",
     "typescript": "^5.4.5"
   },
-  "main": "dist/pkg/cjs/shared/exports.js",
-  "module": "dist/pkg/esm/shared/exports.js",
   "exports": {
-    ".": {
-      "require": "./dist/pkg/cjs/shared/exports.js",
-      "import": "./dist/pkg/esm/shared/exports.js"
-    },
-    "./shared/*": {
-      "require": "./dist/pkg/cjs/shared/*.js",
-      "import": "./dist/pkg/esm/shared/*.js"
-    },
-    "./node/*": {
-      "require": "./dist/pkg/cjs/node/*.js",
-      "import": "./dist/pkg/esm/node/*.js"
-    },
-    "./js/*": {
-      "require": "./dist/pkg/cjs/js/*.js",
-      "import": "./dist/pkg/esm/js/*.js"
+    "browser": {
+      "default": "./dist/shared/_exports.js"
     }
   },
   "homepage": "https://lotsof.dev"
