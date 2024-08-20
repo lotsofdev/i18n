@@ -1,4 +1,3 @@
-// @ts-nocheck
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,16 +7,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import __SDuration from '@coffeekraken/s-duration';
-import __SI18n from '../shared/SI18n';
-import __SI18nExtractParamsInterface from './interface/SI18nExtractParamsInterface';
+import __I18n from '../shared/I18n.js';
+import __I18nExtractParamsInterface from './interface/SI18nExtractParamsInterface';
 import __ts from 'typescript';
 import { __writeJsonSync } from '@coffeekraken/sugar/fs';
 import { __deepMerge, __sort } from '@coffeekraken/sugar/object';
 import { __packageRootDir } from '@coffeekraken/sugar/path';
 import __path from 'path';
 import __SGlob from '@coffeekraken/s-glob';
-export default class SI18n extends __SI18n {
+export default class SI18n extends __I18n {
     /**
      * @name            constructor
      * @type            Function
@@ -43,7 +41,7 @@ export default class SI18n extends __SI18n {
      */
     extract(params) {
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-            const finalParams = __SI18nExtractParamsInterface.apply(params);
+            const finalParams = __I18nExtractParamsInterface.apply(params);
             const duration = new __SDuration();
             console.log(`<yellow>[extract]</yellow> i18n extraction starting...`);
             const files = __SGlob.resolveSync(finalParams.glob, {

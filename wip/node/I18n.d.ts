@@ -1,4 +1,4 @@
-import __SI18n from '../shared/SI18n';
+import __I18n from '../shared/I18n.js';
 /**
  * @name                SI18n
  * @namespace           node
@@ -16,14 +16,14 @@ import __SI18n from '../shared/SI18n';
  * @todo      doc
  * @todo      tests
  *
- * @snippet          __SI18n()
- * const i18n = new __SI18n();
+ * @snippet          __I18n()
+ * const i18n = new __I18n();
  * await i18n.load('en');
  * i18n.set('en');
  *
  * @example             js
- * import __SI18n from '@coffeekraken/s-si18n';
- * const i18n = new __SI18n();
+ * import __I18n from '@coffeekraken/s-si18n';
+ * const i18n = new __I18n();
  * await i18n.load('en');
  * i18n.set('en');
  *
@@ -37,7 +37,7 @@ export interface ISI18nExtractParams {
 }
 export interface ISI18nExtractResult {
 }
-export default class SI18n extends __SI18n {
+export default class SI18n extends __I18n {
     /**
      * @name            constructor
      * @type            Function
